@@ -1,0 +1,35 @@
+
+Showing logs for build [32mkali-lightsaber-python-flask-do-9nm7n-2[0m stage [32mfrom-build-pack[0m and container [32mcredential-initializer[0m
+{"level":"info","ts":1611666216.8038073,"caller":"creds-init/main.go:44","msg":"Credentials initialized."}
+
+Showing logs for build [32mkali-lightsaber-python-flask-do-9nm7n-2[0m stage [32mfrom-build-pack[0m and container [32mworking-dir-initializer[0m
+
+Showing logs for build [32mkali-lightsaber-python-flask-do-9nm7n-2[0m stage [32mfrom-build-pack[0m and container [32mplace-tools[0m
+
+Showing logs for build [32mkali-lightsaber-python-flask-do-9nm7n-2[0m stage [32mfrom-build-pack[0m and container [32mstep-git-source-workspace-89bqn[0m
+{"level":"info","ts":1611666226.8923748,"caller":"git/git.go:105","msg":"Successfully cloned https://github.com/Kali-lightsaber/python-flask-docker.git @ v0.0.2 in path /workspace/source"}
+{"level":"warn","ts":1611666226.8924592,"caller":"git/git.go:152","msg":"Unexpected error: creating symlink: symlink /tekton/home/.ssh /root/.ssh: file exists"}
+{"level":"info","ts":1611666226.926941,"caller":"git/git.go:133","msg":"Successfully initialized and updated submodules in path /workspace/source"}
+
+Showing logs for build [32mkali-lightsaber-python-flask-do-9nm7n-2[0m stage [32mfrom-build-pack[0m and container [32mstep-setup-builder-home[0m
+
+Showing logs for build [32mkali-lightsaber-python-flask-do-9nm7n-2[0m stage [32mfrom-build-pack[0m and container [32mstep-git-merge[0m
+Using SHAs from PULL_REFS=master:
+WARNING: no SHAs to merge, falling back to initial cloned commit
+
+Showing logs for build [32mkali-lightsaber-python-flask-do-9nm7n-2[0m stage [32mfrom-build-pack[0m and container [32mstep-setup-jx-git-credentials[0m
+Generated Git credentials file /workspace/xdg_config/git/credentials
+
+Showing logs for build [32mkali-lightsaber-python-flask-do-9nm7n-2[0m stage [32mfrom-build-pack[0m and container [32mstep-build-python-unittest[0m
+
+----------------------------------------------------------------------
+Ran 0 tests in 0.000s
+
+OK
+
+Showing logs for build [32mkali-lightsaber-python-flask-do-9nm7n-2[0m stage [32mfrom-build-pack[0m and container [32mstep-build-container-build[0m
+E0126 13:04:29.932102      10 aws_credentials.go:77] while getting AWS credentials NoCredentialProviders: no valid providers in chain. Deprecated.
+	For verbose messaging see aws.Config.CredentialsChainVerboseErrors
+error checking push permissions -- make sure you entered the correct tag name, and that you are authenticated correctly, and try again: checking push permission for "http://registry.secret.su/***************/python-flask-docker:0.0.2": creating push check transport for http: failed: Get "https://http/v2/": dial tcp: lookup http on 10.96.0.10:53: no such host
+[31m
+Pipeline failed on stage 'from-build-pack' : container 'step-build-container-build'. The execution of the pipeline has stopped.[0m
